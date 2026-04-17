@@ -6,6 +6,7 @@
         "https://stac-extensions.github.io/stereo-imagery/v1.0.0/schema.json"
       ],
       "id": "CFE521-capture-2",
+      "collection": "stereo-collection-CFE521",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
