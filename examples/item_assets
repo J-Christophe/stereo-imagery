@@ -1,0 +1,65 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/stereo-imagery/v1.0.0/schema.json"
+  ],
+  "id": "stereo-product-CFE521",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-1.5, 43.0],
+        [-1.0, 43.0],
+        [-1.0, 43.5],
+        [-1.5, 43.5],
+        [-1.5, 43.0]
+      ]
+    ]
+  },
+  "bbox": [-1.5, 43.0, -1.0, 43.5],
+  "properties": {
+    "datetime": "2024-06-15T10:32:00Z",
+    "gsd": 0.5,
+    "stereo-img:group": "CFE521",
+    "stereo-img:count": 2,
+    "stereo-img:parallax_angle": 24.8,
+    "stereo-img:parallax_height_ratio": 0.46,
+    "stereo-img:shadow_tip_distance": 0.18,
+    "stereo-img:delta_solar_azimuth_angle": 12.3,
+    "stereo-img:gsd_ratio": 1.0,
+    "stereo-img:overlap_percentage": 80.0
+  },
+  "assets": {
+    "stereo_product": {
+      "href": "https://example.com/stereo/CFE521-stereo.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Stereo product",
+      "roles": ["data"]
+    },
+    "capture_1": {
+      "href": "https://example.com/captures/CFE521-capture-1.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source capture 1",
+      "roles": ["data"],
+      "stereo-img:number": 1,
+      "view:off_nadir": 5.2,
+      "view:sun_azimuth": 175.1,
+      "view:sun_elevation": 58.3,
+      "view:incidence_angle": 31.7
+    },
+    "capture_2": {
+      "href": "https://example.com/captures/CFE521-capture-2.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source capture 2",
+      "roles": ["data"],
+      "stereo-img:number": 2,
+      "view:off_nadir": 20.5,
+      "view:sun_azimuth": 187.4,
+      "view:sun_elevation": 57.1,
+      "view:incidence_angle": 32.9
+    }
+  },
+  "links": []
+}
