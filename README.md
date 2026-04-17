@@ -56,6 +56,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | stereo-img:delta_solar_azimuth_angle    | number  | Absolute difference in solar azimuth angle between the two captures, in degrees. Optional complement to `stereo-img:shadow_tip_distance` to ensure similar illumination. Limits: [0°, 100°] — Recommended: ≤20° (Becker et al., 2015). |
 | stereo-img:gsd_ratio                    | number  | Ratio of the larger to the smaller GSD (`gsd`) between the two captures at a common ground point. Pairs with a ratio above 2.5 should be resampled to the lower resolution before stereo processing. Limits: [1.0, 2.5] (Becker et al., 2015). |
 | stereo-img:overlap_percentage           | number  | Percentage of common surface coverage between the two captures, expressed as a ratio of the smaller area to the larger. Stereo convergence obtained by targeting captures off-nadir does not weaken the stereo geometry. Limits: [30%, 100%] — Recommended: [50%, 100%] (Becker et al., 2015). |
+| stereo-img:delta_time                   | string  | Time elapsed between the two captures, expressed as an ISO 8601 duration (e.g. PT2M30S for 2 minutes 30 seconds). A large time difference may degrade stereo matching quality due to surface changes (snow, vegetation, tides, dust storms) or atmospheric variations between the two acquisitions. The acceptable range is highly dependent on the target surface and application. |
 
 The field in the table below can be used in these parts of STAC documents depending on how source captures are provided:
 - when source captures are provided as **separate Items** : in Item Properties
@@ -144,6 +145,7 @@ API [Filter Extension](https://github.com/stac-api-extensions/filter) as follows
 - Find high-quality stereo pairs: `stereo-img:parallax_height_ratio >= 0.4 and stereo-img:parallax_height_ratio <= 0.6`
 - Find pairs with good illumination compatibility: `stereo-img:shadow_tip_distance <= 0.5`
 - Find pairs with sufficient overlap: `stereo-img:overlap_percentage >= 50`
+- Find pairs acquired close in time: stereo-img:delta_time <= 'PT10M'
 
 All examples are expressed in CQL Text.
 
