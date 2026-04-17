@@ -8,7 +8,7 @@
         "https://stac-extensions.github.io/view/v1.0.0/schema.json",
         "https://stac-extensions.github.io/stereo-imagery/v1.0.0/schema.json"
       ],
-      "id": "stereo-product-CFE521",
+      "id": "stereo-collection-CFE521",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -67,13 +67,13 @@
       "links": [
         {
           "rel": "derived_from",
-          "href": "https://example.com/items/CFE521-capture-1",
+          "href": "https://example.com/items/CFE521-capture-1.json",
           "type": "application/geo+json",
           "title": "Source capture 1"
         },
         {
           "rel": "derived_from",
-          "href": "https://example.com/items/CFE521-capture-2",
+          "href": "https://example.com/items/CFE521-capture-2.json",
           "type": "application/geo+json",
           "title": "Source capture 2"
         }
