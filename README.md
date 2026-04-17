@@ -58,8 +58,8 @@ The fields in the table below can be used in these parts of STAC documents:
 | stereo-img:overlap_percentage           | number  | Percentage of common surface coverage between the two captures, expressed as a ratio of the smaller area to the larger. Stereo convergence obtained by targeting captures off-nadir does not weaken the stereo geometry. Limits: [30%, 100%] — Recommended: [50%, 100%] (Becker et al., 2015). |
 
 The field in the table below can be used in these parts of STAC documents depending on how source captures are provided:
-- when source captures are provided as **separate Items** (cases B and C): in Item Properties
-- when source captures are provided as **assets** of the stereo product Item (case A): in Asset fields
+- when source captures are provided as **separate Items** : in Item Properties
+- when source captures are provided as **assets** of the stereo product Item : in Asset fields
 - [x] Item Properties (incl. Summaries in Collections)
 - [x] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [x] Links (in Items)
