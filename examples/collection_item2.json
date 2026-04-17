@@ -1,0 +1,72 @@
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/stereo-imagery/v1.0.0/schema.json"
+      ],
+      "id": "CFE521-capture-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.6,
+              42.9
+            ],
+            [
+              -0.9,
+              42.9
+            ],
+            [
+              -0.9,
+              43.6
+            ],
+            [
+              -1.6,
+              43.6
+            ],
+            [
+              -1.6,
+              42.9
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -1.6,
+        42.9,
+        -0.9,
+        43.6
+      ],
+      "properties": {
+        "datetime": "2024-06-15T10:30:00Z",
+        "gsd": 0.5,
+        "view:off_nadir": 5.2,
+        "view:sun_azimuth": 175.1,
+        "view:sun_elevation": 58.3,
+        "view:incidence_angle": 31.7,
+        "stereo-img:group": "CFE521",
+        "stereo-img:count": 2,
+        "stereo-img:number": 1
+      },
+      "assets": {
+        "image": {
+          "href": "https://example.com/captures/CFE521-capture-1.tif",
+          "type": "image/tiff; application=geotiff",
+          "title": "Capture 1",
+          "roles": [
+            "data"
+          ]
+        }
+      },
+      "links": [
+        {
+          "rel": "related",
+          "href": "https://example.com/items/CFE521-capture-2",
+          "type": "application/geo+json",
+          "title": "Source capture 2",
+          "stereo-img:number": 2
+        }
+      ]
+    }
