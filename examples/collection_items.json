@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/stereo-imagery/v1.0.0/schema.json"
+      ],
+      "id": "stereo-product-CFE521",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.5,
+              43
+            ],
+            [
+              -1,
+              43
+            ],
+            [
+              -1,
+              43.5
+            ],
+            [
+              -1.5,
+              43.5
+            ],
+            [
+              -1.5,
+              43
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -1.5,
+        43,
+        -1,
+        43.5
+      ],
+      "properties": {
+        "datetime": "2024-06-15T10:32:00Z",
+        "gsd": 0.5,
+        "stereo-img:group": "CFE521",
+        "stereo-img:count": 2,
+        "stereo-img:parallax_angle": 24.8,
+        "stereo-img:parallax_height_ratio": 0.46,
+        "stereo-img:shadow_tip_distance": 0.18,
+        "stereo-img:delta_solar_azimuth_angle": 12.3,
+        "stereo-img:gsd_ratio": 1,
+        "stereo-img:overlap_percentage": 80
+      },
+      "assets": {
+        "stereo_product": {
+          "href": "https://example.com/stereo/CFE521-stereo.tif",
+          "type": "image/tiff; application=geotiff",
+          "title": "Stereo product",
+          "roles": [
+            "data"
+          ]
+        }
+      },
+      "links": [
+        {
+          "rel": "derived_from",
+          "href": "https://example.com/items/CFE521-capture-1",
+          "type": "application/geo+json",
+          "title": "Source capture 1"
+        },
+        {
+          "rel": "derived_from",
+          "href": "https://example.com/items/CFE521-capture-2",
+          "type": "application/geo+json",
+          "title": "Source capture 2"
+        }
+      ]
+    }
